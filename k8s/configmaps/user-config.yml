@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: user-config
+  namespace: ecommerce
+data:
+  FLASK_ENV: production
+

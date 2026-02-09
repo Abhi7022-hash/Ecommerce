@@ -1,0 +1,16 @@
+body {
+    font-family: Arial;
+    margin: 20px;
+}
+
+nav a {
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+.card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
