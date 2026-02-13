@@ -16,6 +16,7 @@ spec:
       containers:
       - name: order
         image: abhishek661/o1:order
+        imagePullPolicy: Always
         ports:
         - containerPort: 5003
 
