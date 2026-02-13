@@ -32,7 +32,7 @@ pipeline {
                     passwordVariable: "DOCKER_PASSWORD"
                 )]) {
                     sh '''
-                    docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+                    echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
                     '''
                 }
             }
@@ -78,7 +78,7 @@ pipeline {
                 withCredentials([file(credentialsId: 'kubeconfig-cred', variable: 'KUBECONFIG')]) {
                     sh '''
                     export KUBECONFIG=$KUBECONFIG
-                    kubectl rollout restart k8s/deployment/
+                    kubectl rollout restart deployment --all
                     '''
                 }
             }
