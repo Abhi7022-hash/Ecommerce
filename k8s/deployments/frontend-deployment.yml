@@ -16,6 +16,7 @@ spec:
       containers:
       - name: frontend
         image: abhishek661/f2:front
+        imagePullPolicy: Always
         ports:
         - containerPort: 5000
         envFrom:
