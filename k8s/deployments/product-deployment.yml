@@ -16,6 +16,7 @@ spec:
       containers:
       - name: product
         image: abhishek661/p2:product
+        imagePullPolicy: Always
         ports:
         - containerPort: 5002
 
