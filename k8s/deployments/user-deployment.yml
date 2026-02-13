@@ -16,6 +16,7 @@ spec:
       containers:
       - name: user
         image: abhishek661/u1:user
+        imagePullPolicy: Always
         ports:
         - containerPort: 5001
         env:
