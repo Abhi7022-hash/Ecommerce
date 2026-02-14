@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         DOCKER_USER = "abhishek661"
-        DOCKER_CREDS = "dockerhub_cred"
+        DOCKER_CREDS = "dockerhub-creds"
     }
     stages {
 
