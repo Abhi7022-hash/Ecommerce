@@ -86,7 +86,7 @@ pipeline {
         }
     }
     post {
-        Success {
+        success {
             echo "CICD Pipeline Completed"
         }
         failure {
