@@ -79,10 +79,10 @@ pipeline {
                 withCredentials([file(credentialsId: 'kubeconfig-cred', variable: 'KUBECONFIG')]) {
                     sh '''
                     export KUBECONFIG=$KUBECONFIG
-                    kubectl rollout restart deployment frontend-deployment
-                    kubectl rollout restart deployment user-deployment
-                    kubectl rollout restart deployment product-deployment
-                    kubectl rollout restart deployment order-deployment
+                    kubectl rollout restart deployment frontend-deployment -n ecommerce
+                    kubectl rollout restart deployment user-deployment -n ecommerce
+                    kubectl rollout restart deployment product-deployment -n ecommerce
+                    kubectl rollout restart deployment order-deployment -n ecommerce
                     
                     '''
                 }
